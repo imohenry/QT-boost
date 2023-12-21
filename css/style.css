@@ -696,6 +696,7 @@
     color: #fff;
     padding: 16px 70px;
     border-radius: 8px;
+    border: none;
 }
 
 .speaker-info {
@@ -753,6 +754,127 @@ EBOOK SECTION
     position: absolute;
     left: 20%;
     bottom: 0%;
+}
+
+/* Popupform */
+
+.pop-heading {
+  text-align: center;
+  color: #004250;
+  padding-bottom: 20px;
+  font-size: 28px;
+  font-weight:700;
+}
+
+.form-handle {
+  width: 100%;
+}
+
+.loginPopup {
+  position: absolute;
+  text-align: left;
+  width: 100%;
+  left: 0%;
+top: -22%;
+  
+}
+.formPopup {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  left: 50%;
+  top: -20%;
+  padding-bottom: 2950px;
+  padding-top: 155px;
+  transform: translate(-50%, 5%);
+  background: rgba(0, 0, 0, 0.935);
+  z-index: 100;
+  /* border-radius: 12px; */
+}
+
+.formContainer {
+  margin: 0 auto;
+  max-width: 480px;
+  padding: 23px 44px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.formContainer .cancel {
+  background-color: #cc0000 !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: absolute;
+  top: 50px;
+  right: 1px;
+  padding: 7px 14px;
+  border-radius: 30px;
+  color: #fff !important;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 700;
+  margin-right: 12px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.required_symbol {
+  color: #EE312A;
+}
+
+.form-control {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  padding: 15px 19px !important;
+  font-size: 1rem !important;
+  line-height: 1.4 !important;
+  color: #475F7B !important;
+  background-color: #F3F5F6 !important;
+  border-radius: .267rem;
+  -webkit-transition: .15s ease-in-out,box-shadow .15s ease-in-out !important;
+  transition: .15s ease-in-out,box-shadow .15s ease-in-out;
+  border: 0px !important;
+}
+
+.form-message-control {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 15px 19px;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #475F7B;
+  background-color: #F3F5F6 !important;
+
+  border-radius: .267rem;
+  -webkit-transition:  .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: .15s ease-in-out,box-shadow .15s ease-in-out;
+  border: 0px !important;
+}
+.form-control:focus {
+  color: #475F7B;
+  background-color: #FFF !important;
+  border-color: #EE312A !important;
+  outline: 0;
+  box-shadow: 0 3px 8px 0 rgb(0 0 0 / 10%);
+}
+
+.c-title {
+  text-transform: uppercase;
+}
+
+.form-submit {
+  margin: 20px auto;
+}
+
+.button-align {
+  margin: 0 auto;
+  text-align: center;
 }
 
 
