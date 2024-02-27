@@ -158,7 +158,8 @@ document.getElementById('form_details').addEventListener('submit', async functio
       const scriptURL = "https://script.google.com/macros/s/AKfycbxgnjgjzV0rrutXF977EGcihKNYrInBp5je2cV53nvBzBFpAvzQdaOI_KuTbnKs5u5B4A/exec"; 
       const form = document.getElementById('form_details');
       const formData = new FormData(form);
-      await fetch(scriptURL, { method: "POST", body: new FormData(form) } 
+      await fetch(scriptURL, { method: "POST", body: new FormData(form) },
+      { mode: 'no-cors'}
       // .then((res) => res.json())
       // .then((data) => console.log(data))
       );
