@@ -140,6 +140,17 @@ document.getElementById('form_details').addEventListener('submit', async functio
     const data = await response.json();
 
     // Submit data regardless of response status
+    smartech('create', 'ADGMOT35CHFLVDHBJNIG50K968HGC4AU9CK8VRN68EHEH9MQ0RU0');
+    smartech('register', 'ed71c43ad003846d01e0e99be1c64d00');
+    smartech('identify', '');
+
+    smartech('dispatch', 1, {
+        "s^url": "<Replace url value here>",
+        "i^sts": "<Replace sts value here>",
+        "i^pts": "<Replace pts value here>",
+        "i^npv": "<Replace npv value here>",
+        "s^title": "<Replace title value here>"
+    });
     await smartech('identify', emailAddress);
     await smartech('dispatch', "boost_ebook_data", {
         "email": emailAddress,
