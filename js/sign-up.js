@@ -178,7 +178,7 @@ document.getElementById('form_details').addEventListener('submit', async functio
 
      // Handle success and existing user scenarios based on the API response
     if (response.ok) {
-    const pdfUrl = 'https://interswitchgroup.com/boost/QTB-eBook.pdf';
+    const pdfUrl = 'https://mcusercontent.com/a3d687905d2a2c4b266d653e8/files/d19ee639-6d78-215e-7c5e-c475dae07e25/QTB_eBook.pdf';
     const anchor = document.createElement('a');
     anchor.href = pdfUrl;
     anchor.download = 'QTB_eBook.pdf'; // Pdf filename
@@ -199,7 +199,7 @@ document.getElementById('form_details').addEventListener('submit', async functio
       form.reset();
     } else if (response.status === 400) {
       
-      const pdfUrl = 'https://interswitchgroup.com/boost/QTB-eBook.pdf';
+      const pdfUrl = 'https://mcusercontent.com/a3d687905d2a2c4b266d653e8/files/d19ee639-6d78-215e-7c5e-c475dae07e25/QTB_eBook.pdf';
       const anchor = document.createElement('a');
       anchor.href = pdfUrl;
       anchor.download = 'QTB_eBook.pdf'; // Pdf filename
