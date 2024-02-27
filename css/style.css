@@ -743,7 +743,7 @@ EBOOK SECTION
 }
 
 .ebook-image {
-    max-width: 400px;
+    max-width: 500px;
 }
 
 .ebook-image img{
@@ -783,13 +783,15 @@ top: -22%;
   position: fixed;
   width: 100vw;
   height: 100%;
-  left: 50%;
-  top: -20%;
+  left: 0%;
+  top: 0%;
   padding-bottom: 2950px;
   padding-top: 155px;
-  transform: translate(-50%, 5%);
+  /* transform: translate(-50%, 5%); */
   background: rgba(0, 0, 0, 0.935);
   z-index: 100;
+  overflow-y: scroll;
+  overflow-x: scroll;
   /* border-radius: 12px; */
 }
 
@@ -1086,6 +1088,25 @@ Blog SECTION
 .social-logos i{
     color: #00425F;
     font-size: 21px;
+}
+
+.cbn-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  margin-bottom: 20px;
+}
+
+.cbn-flex img{ 
+  width: 32px;
+  height: 42px;
+  object-fit: contain;
+  margin-right: 14px;
+}
+
+.cbn-flex p {
+  margin: 0;
 }
 
 

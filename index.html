@@ -35,8 +35,8 @@
 
             <ul class="menu">
                 <li class="nav-item"><a href="https://business.quickteller.com/"> About </a></li>
-                <li class="nav-item"><a href="resources.html"> Webinar </a></li>
-                <li class="nav-item"><a href="resources.html"> E-book </a></li>
+                <li class="nav-item"><a href="#webinar"> Webinar </a></li>
+                <li class="nav-item"><a href="#ebook"> E-book </a></li>
                 <li class="nav-item"><a href="https://www.interswitchgroup.com/blog/home"> Blog </a></li>
                 <li class="talk-btn nav-item"> <a href="https://business.quickteller.com/"> Get Started </a></li>
                 <li class="nav-item flag"><a href="index.html"> <img src="images/Nigeria-flag.svg"> </a> </li>
@@ -78,7 +78,7 @@
             </h2>
         </div>
 
-        <div class="speaker-detail-flex">
+        <div class="speaker-detail-flex" id="webinar">
             <div class="speaker-img-cont">
                 <div class="speaker-dots">
                  <img src="images/2nd-blue-dot.png" alt="poker-dot">
@@ -169,7 +169,7 @@
     </section>
 
     <!-- EBOOK SECTION -->
-    <section class="ebook">
+    <section class="ebook" id="ebook">
         <div class="container">
             <div class="download-ebook-heading">
                 <h1>
@@ -190,16 +190,16 @@
                         </h3>
                     </div>
                     <h2 class="speaker-big-head">
-                        15 Ways to Grow Your Business Online
+                        10 Proven Ways To Get More Customers
                     </h2>
 
                     <p class="">
-                        This e-book is designed to help you learn the skills you need to be a successful small business owner. 
-                        Whether you are new to entrepreneurship or a seasoned veteran, you will find techniques and ideas here to help you grow your business.
-                        In this eBook, you will learn:
+                        In this e-book, we delve into strategic and cost-effective methods that have proven to be effective in attracting customers.
+                        From leveraging the power of word-of-mouth to embracing the digital age with impactful social media strategies, we've curated a 
+                        collection of tried-and-tested approaches to help your business thrive.
                     </p>
 
-                    <ul>
+                    <!-- <ul>
                         <li>
                             Leveraging social media to make sales
                         </li>
@@ -209,37 +209,37 @@
                         <li>
                             How to have an entrepreneurial mindset
                         </li>
-                    </ul>
+                    </ul> -->
                     <button class="reserve-seat-btn" onclick ="openForm()">Download</button>
 
                  <!-- POPUP form -->
                     <div class="loginPopup">
                         <div class="formPopup" id="popupForm" style="display: none;">
-                            <form action="" id="form_details" class="formContainer">
+                            <form action="" name="form_details" id="form_details" class="formContainer">
                             <button type="button" class="apple-store btn cancel" onclick="closeForm()">x</button>
-                            <h2 class="pop-heading">Fill in your details</h2>
+                            <h2 class="pop-heading">Sign up to download the ebook</h2>
                             <div class="form-group">
                                 <span class="input_placeholder">First Name <span class="required_symbol">*</span></span>
-                                    <input type="text" id="firstName" class="form-control"  value="" required/>
+                                    <input type="text" name="firstName" id="firstName" class="form-control"  value="" required/>
                                 </div>
                                 <div class="form-group">
                                     <span class="input_placeholder">Last Name<span class="required_symbol">*</span></span>
-                                    <input type="text" id="lastName" class="form-control" name="name" required/>
+                                    <input type="text" name="lastName" id="lastName" class="form-control" required/>
                                 </div>
                                 <div class="form-group">
                                     <span class="input_placeholder">Email Address<span class="required_symbol">*</span></span>
-                                    <input type="email" id="email" class="form-control" name="name" required/>
+                                    <input type="email" name="email" id="email" class="form-control" autocomplete="email" required/>
                                 </div>
                                 <div class="form-group">
-                                    <span class="input_placeholder">Location <span class="optional"></span></span>
-                                    <input id="location" class="form-control tel" type="text" name="location" value=""/>
+                                    <span class="input_placeholder">Phone Number <span class="required_symbol">*</span></span>
+                                    <input id="number" name="number" class="form-control tel" type="number" autocomplete="" value=""/>
                                 </div>
                                 <div class="form-group">
-                                    <span class="input_placeholder">Name and Nature of Business <span class="optional"></span></span>
-                                    <input id="name_and_nature_of_business" class="form-control tel" type="text" value=""/>
+                                    <span class="input_placeholder">Password <span class="required_symbol">*</span></span>
+                                    <input id="password" name="password" class="form-control tel" type="text" value=""/>
                                 </div>
                                 <div class="button-align">
-                                    <button type="submit" id="download-pdf" class="reserve-seat-btn form-submit">Download Ebook</button>
+                                    <button type="submit" id="download-pdf" class="reserve-seat-btn form-submit">Submit and Download</button>
                                 </div>
                             </form>
                         </div>
@@ -383,7 +383,7 @@
                     <img src="./images/QT-logo.svg" alt="Footer QT boost logo">
                 </div>
                 <div class="copyright">
-                    © 2002 - 2023 Interswitch Group
+                    © 2024 Interswitch Group
                 </div>
                 <div class="social-logos">
                     <a href="https://www.linkedin.com/products/interswitch-limited-quickteller/">
@@ -403,6 +403,15 @@
                     </a>
                 </div>
             </div>
+        </div>
+
+        <div class="cbn-flex" style="display: flex;  align-items: center; justify-content: center; margin-top: 24px;
+        margin-bottom: 20px;">
+            <img src="images/img-cbn.webp" alt="cbn image" style=" width: 32px;
+            height: 42px;
+            object-fit: contain;
+            margin-right: 14px;">
+            <p> Quickteller Boost is regulated by the Central Bank of Nigeria</p>
         </div>
     </section>
 
@@ -424,68 +433,21 @@
 
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src='//tw.netcore.co.in/smartechclient.js'></script>
+    <script  src="//cdnt.netcoresmartech.com/smartechclient.js"></script>
 
     	<script>
-		smartech('create', 'ADGMOT35CHFLVDHBJNIG50K968HGC4AU9CK8VRN68EHEH9MQ0RU0');
-		smartech('register', 'ed71c43ad003846d01e0e99be1c64d00');
-		smartech('identify', '');
-	
-		smartech('dispatch', 1, {
-			"s^url": "<Replace url value here>",
-			"i^sts": "<Replace sts value here>",
-			"i^pts": "<Replace pts value here>",
-			"i^npv": "<Replace npv value here>",
-			"s^title": "<Replace title value here>"
-		});
+
         
 	</script>
 
 
 <script>
-    let form = document.getElementById('form_details')
-    form.addEventListener('submit' , (e) => {e.preventDefault();
-        var firstName = document.getElementById('firstName').value;
-        var lastName = document.getElementById('lastName').value;
-		var email = document.getElementById('email').value;
-		var mobile = document.getElementById('location').value;
-		var course = document.getElementById('name_and_nature_of_business').value;
-	
-
-		if (firstName === "" | lastName === "" | email === "" | location === "" | name_and_nature_of_business === "") {
-			Swal.fire({ title: "Error!", text: 'Please fill the form fields', type: "danger" });
-
-		} else {
-
-            smartech('identify', email);
-            smartech('dispatch', "boost_ebook_data", {
-                "email": email,
-                "FIRSTNAME": firstName,
-                "LASTNAME": lastName,
-                "PHONENUMBER": location,
-                "OTHERS": name_and_nature_of_business
-					
-            })
-            smartech('contact', '412', {
-                    'pk^email': email,
-                    "FIRSTNAME": firstName,
-                    "LASTNAME": lastName,
-                    "PHONENUMBER": location,
-                    "OTHERS": name_and_nature_of_business
-                    
-                })
-
-                Swal.fire({
-                    title: "Congratulations!",
-                    icon: "success",
-                    text: "Your details has been received",
-                })
-			//form.reset();
-			.then(form.reset())}})
-
+   
 </script>
 
+
 <script src="js/download-pdf.js"></script>
+<script src="js/sign-up.js"></script>
 
 </body>
 </html>
