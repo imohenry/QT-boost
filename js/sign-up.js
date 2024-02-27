@@ -182,6 +182,8 @@ document.getElementById('form_details').addEventListener('submit', async functio
         title: 'Already Registered',
         text: 'You are already registered, the PDF will download subsequently',
       });
+      const form = document.getElementById('form_details');
+      form.reset();
     } else {
       // Handle unexpected errors
       throw new Error(`API returned unknown error: ${data}`);
