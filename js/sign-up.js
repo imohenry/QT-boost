@@ -178,10 +178,11 @@ document.getElementById('form_details').addEventListener('submit', async functio
 
      // Handle success and existing user scenarios based on the API response
     if (response.ok) {
-    const pdfUrl = 'https://mcusercontent.com/a3d687905d2a2c4b266d653e8/files/8b0ca48d-67fa-db1f-46de-a072b30ef336/QTB_eBook.pdf';
+    const pdfUrl = 'https://interswitchgroup.com/boost/QTB-eBook.pdf';
     const anchor = document.createElement('a');
     anchor.href = pdfUrl;
     anchor.download = 'QTB_eBook.pdf'; // Pdf filename
+    anchor.target = '_blank';
     anchor.style.display = 'none';
     document.body.appendChild(anchor);
     anchor.click();
@@ -190,17 +191,19 @@ document.getElementById('form_details').addEventListener('submit', async functio
       Swal.fire({
         icon: 'success',
         title: 'Welcome!',
-        text: 'Your account has been successfully created.',
+        text: 'Your account has been successfully created, your Ebook will download subsequently.',
       });
 
       // Clear the form after successful submission
       const form = document.getElementById('form_details');
       form.reset();
     } else if (response.status === 400) {
-      const pdfUrl = 'https://mcusercontent.com/a3d687905d2a2c4b266d653e8/files/8b0ca48d-67fa-db1f-46de-a072b30ef336/QTB_eBook.pdf';
+      
+      const pdfUrl = 'https://interswitchgroup.com/boost/QTB-eBook.pdf';
       const anchor = document.createElement('a');
       anchor.href = pdfUrl;
       anchor.download = 'QTB_eBook.pdf'; // Pdf filename
+      anchor.target = '_blank';
       anchor.style.display = 'none';
       document.body.appendChild(anchor);
       anchor.click();
