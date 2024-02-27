@@ -178,15 +178,11 @@ document.getElementById('form_details').addEventListener('submit', async functio
 
      // Handle success and existing user scenarios based on the API response
     if (response.ok) {
-    const pdfUrl = 'https://mcusercontent.com/a3d687905d2a2c4b266d653e8/files/d19ee639-6d78-215e-7c5e-c475dae07e25/QTB_eBook.pdf';
-    const anchor = document.createElement('a');
-    anchor.href = pdfUrl;
-    anchor.download = 'QTB_eBook.pdf'; // Pdf filename
-    anchor.target = '_blank';
-    anchor.style.display = 'none';
-    document.body.appendChild(anchor);
-    anchor.click();
-    document.body.removeChild(anchor);
+      const pdfUrl = 'https://mcusercontent.com/a3d687905d2a2c4b266d653e8/files/d19ee639-6d78-215e-7c5e-c475dae07e25/QTB_eBook.pdf';
+      const iframe = document.createElement('iframe');
+      iframe.style.display = 'none';
+      iframe.src = pdfUrl;
+      document.body.appendChild(iframe);
 
       Swal.fire({
         icon: 'success',
@@ -198,16 +194,11 @@ document.getElementById('form_details').addEventListener('submit', async functio
       const form = document.getElementById('form_details');
       form.reset();
     } else if (response.status === 400) {
-      
       const pdfUrl = 'https://mcusercontent.com/a3d687905d2a2c4b266d653e8/files/d19ee639-6d78-215e-7c5e-c475dae07e25/QTB_eBook.pdf';
-      const anchor = document.createElement('a');
-      anchor.href = pdfUrl;
-      anchor.download = 'QTB_eBook.pdf'; // Pdf filename
-      anchor.target = '_blank';
-      anchor.style.display = 'none';
-      document.body.appendChild(anchor);
-      anchor.click();
-      document.body.removeChild(anchor);
+      const iframe = document.createElement('iframe');
+      iframe.style.display = 'none';
+      iframe.src = pdfUrl;
+      document.body.appendChild(iframe);
       // Existing user message
       Swal.fire({
         icon: 'warning',
