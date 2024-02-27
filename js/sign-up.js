@@ -96,6 +96,18 @@
 //     }
 
 // document.getElementById('form_details').addEventListener('submit', signUp) 
+function downloadPDF() {
+  const pdfUrl = 'https://mcusercontent.com/a3d687905d2a2c4b266d653e8/files/d19ee639-6d78-215e-7c5e-c475dae07e25/QTB_eBook.pdf'; // Update this with the correct PDF URL
+
+  const anchor = document.createElement('a');
+  anchor.href = pdfUrl;
+  anchor.download = 'QTB_eBook.pdf';
+  anchor.target = '_blank';
+  anchor.style.display = 'none';
+  document.body.appendChild(anchor);
+  anchor.click();
+  document.body.removeChild(anchor);
+}
 
 document.getElementById('form_details').addEventListener('submit', async function(event) {
   event.preventDefault();
@@ -178,32 +190,39 @@ document.getElementById('form_details').addEventListener('submit', async functio
 
      // Handle success and existing user scenarios based on the API response
     if (response.ok) {
-      const pdfUrl = 'https://mcusercontent.com/a3d687905d2a2c4b266d653e8/files/d19ee639-6d78-215e-7c5e-c475dae07e25/QTB_eBook.pdf';
-      const iframe = document.createElement('iframe');
-      iframe.style.display = 'none';
-      iframe.src = pdfUrl;
-      document.body.appendChild(iframe);
+      
 
       Swal.fire({
         icon: 'success',
         title: 'Welcome!',
-        text: 'Your account has been successfully created, your Ebook will download subsequently.',
+        text: 'Your account has been successfully created. Click on Download Ebook to get your copy.',
+        // showCancelButton: true,
+        // cancelButtonColor: '#d33',
+        confirmButtonText: 'Download Ebook',
+        // cancelButtonText: 'Close'
+      }) .then((result) => {
+        if (result.isConfirmed) {
+          downloadPDF();
+        }
       });
 
       // Clear the form after successful submission
       const form = document.getElementById('form_details');
       form.reset();
     } else if (response.status === 400) {
-      const pdfUrl = 'https://mcusercontent.com/a3d687905d2a2c4b266d653e8/files/d19ee639-6d78-215e-7c5e-c475dae07e25/QTB_eBook.pdf';
-      const iframe = document.createElement('iframe');
-      iframe.style.display = 'none';
-      iframe.src = pdfUrl;
-      document.body.appendChild(iframe);
-      // Existing user message
       Swal.fire({
         icon: 'warning',
         title: 'Already Registered',
-        text: 'You are already registered, the PDF will download subsequently',
+        text: 'You are already registered. Click on Download Ebook to get your copy.',
+        // showCancelButton: true,
+        // confirmButtonColor: '#3085d6',
+        // cancelButtonColor: '#d33',
+        confirmButtonText: 'Download Ebook',
+        // cancelButtonText: 'Close'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          downloadPDF();
+        }
       });
       const form = document.getElementById('form_details');
       form.reset();
